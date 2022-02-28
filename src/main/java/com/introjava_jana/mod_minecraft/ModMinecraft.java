@@ -21,15 +21,15 @@ import java.util.stream.Collectors;
 import static net.minecraftforge.versions.forge.ForgeVersion.MOD_ID;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(mod_minecraft.MOD_ID)
-public class mod_minecraft
+@Mod(ModMinecraft.MOD_ID)
+public class ModMinecraft
 {
 
     public static final String MOD_ID = "mod_minecraft";
 
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public mod_minecraft() {
+    public ModMinecraft() {
 
         IEventBus EventBus = FMLJavaModLoadingContext.get().getModEventBus();
         EventBus.addListener(this::setup);
