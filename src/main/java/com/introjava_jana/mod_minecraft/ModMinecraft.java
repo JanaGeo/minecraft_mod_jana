@@ -1,38 +1,40 @@
 package com.introjava_jana.mod_minecraft;
 
-import net.minecraft.world.level.block.Block;
+import com.introjava_jana.mod_minecraft.entity.custom.ModEntityTypes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
 
-import static net.minecraftforge.versions.forge.ForgeVersion.MOD_ID;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(mod_minecraft.MOD_ID)
-public class mod_minecraft
+@Mod(ModMinecraft.MOD_ID)
+public class ModMinecraft
 {
 
-    public static final String MOD_ID = "mod_minecraft";
+    public static final String MOD_ID = "ModMinecraft";
 
     private static final Logger LOGGER = LogManager.getLogger();
+    public static String mod_ID;
 
-    public mod_minecraft() {
 
-        IEventBus EventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        EventBus.addListener(this::setup);
+    public ModMinecraft() {
+
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModEntityTypes.register(eventBus);
+
+        eventBus.addListener(this::setup);
+
+
+
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
