@@ -1,4 +1,4 @@
-package com.introjava_jana.mod_minecraft.entity.model;
+package com.introjava_jana.mod_minecraft.entities.model;
 
 import net.minecraft.world.entity.TamableAnimal;
 

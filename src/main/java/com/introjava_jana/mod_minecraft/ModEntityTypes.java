@@ -1,11 +1,9 @@
 package com.introjava_jana.mod_minecraft;
 
-import com.introjava_jana.mod_minecraft.entity.custom.KangarooEntity;
-import com.introjava_jana.mod_minecraft.entity.model.KangarooModel;
+import com.introjava_jana.mod_minecraft.entities.custom.KangarooEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

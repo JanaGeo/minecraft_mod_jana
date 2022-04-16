@@ -1,11 +1,10 @@
-package com.introjava_jana.mod_minecraft.entity.render;
+package com.introjava_jana.mod_minecraft.entities.render;
 
 import com.introjava_jana.mod_minecraft.ModMinecraft;
-import com.introjava_jana.mod_minecraft.entity.custom.KangarooEntity;
-import com.introjava_jana.mod_minecraft.entity.model.KangarooModel;
+import com.introjava_jana.mod_minecraft.entities.custom.KangarooEntity;
+import com.introjava_jana.mod_minecraft.entities.model.KangarooModel;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.TamableAnimal;
 
 public class KangarooRenderer extends MobRenderer<KangarooEntity, KangarooModel<KangarooModel>>
 {
