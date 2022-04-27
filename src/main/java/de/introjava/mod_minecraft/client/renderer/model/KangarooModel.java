@@ -1,6 +1,7 @@
-package com.introjava_jana.mod_minecraft.entities.model;
+package de.introjava.mod_minecraft.client.renderer.model;
 
-import com.introjava_jana.mod_minecraft.entities.custom.KangarooEntity;
+import de.introjava.mod_minecraft.ModMinecraft;
+import de.introjava.mod_minecraft.common.entity.KangarooEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
@@ -10,9 +11,9 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 
-public class KangarooModel<T extends KangarooEntity> extends EntityModel<T> {
+public class KangarooModel<Type extends KangarooEntity> extends EntityModel<Type> {
 
-        public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "custom_model"), "main");
+        public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(ModMinecraft.MOD_ID, "kangaroo"), "main");
         private final ModelPart Head;
         private final ModelPart Body;
         private final ModelPart right_leg;
@@ -21,7 +22,7 @@ public class KangarooModel<T extends KangarooEntity> extends EntityModel<T> {
         private final ModelPart right_arm;
         private final ModelPart left_arm;
 
-        public KangarooModel (ModelPart root) {
+        public KangarooModel(ModelPart root) {
             Head = root.getChild("Head");
             this.Body = root.getChild("Body");
             this.right_leg = root.getChild("right_leg");
@@ -31,7 +32,8 @@ public class KangarooModel<T extends KangarooEntity> extends EntityModel<T> {
             this.left_arm = root.getChild("left_arm");
         }
 
-        public static LayerDefinition createBodyLayer() {
+
+    public static LayerDefinition createBodyLayer() {
             MeshDefinition meshdefinition = new MeshDefinition();
             PartDefinition partdefinition = meshdefinition.getRoot();
 
@@ -76,7 +78,7 @@ public class KangarooModel<T extends KangarooEntity> extends EntityModel<T> {
         }
 
         @Override
-        public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        public void setupAnim(Type entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
         }
 
