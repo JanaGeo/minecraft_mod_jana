@@ -18,7 +18,7 @@ public final class ModEntityInit {
 
     public static final RegistryObject<EntityType<KangarooEntity>> KANGAROO =
             ENTITIES.register("kangaroo", () -> EntityType.Builder.of(KangarooEntity::new, MobCategory.CREATURE)
-                    .sized(1f, 3f)
+                    .sized(3f, 4f)
                     .build(new ResourceLocation(ModMinecraft.MOD_ID, "kangaroo").toString()));
 
 }

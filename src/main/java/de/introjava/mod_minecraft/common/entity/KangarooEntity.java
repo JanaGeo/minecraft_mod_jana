@@ -35,7 +35,7 @@ public class KangarooEntity extends TamableAnimal {
     }
 
     public static AttributeSupplier.Builder createAttributes () {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 50.0D).add(Attributes.MOVEMENT_SPEED, 0.25D);
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 50.0D).add(Attributes.MOVEMENT_SPEED, 0.15D);
     }
 
 
